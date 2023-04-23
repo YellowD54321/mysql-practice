@@ -1,5 +1,6 @@
 const express = require("express");
-const equipmentsRouter = require("./routes/equipments");
+const pokemonRouter = require("./routes/pokemons");
+const livePokemonRouter = require("./routes/livePokemons");
 
 const app = express();
 const port = 3000;
@@ -15,10 +16,11 @@ app.get("/", (req, res) => {
   res.json({ message: "ok" });
 });
 
-app.use("/equipments", equipmentsRouter);
+app.use("/pokemons", pokemonRouter);
+app.use("/live-pokemons", livePokemonRouter);
 
 app.use((err, req, res, next) => {
-  const statusCode = err.statusCode || 500;
+  const statusCode = err.status || 500;
   console.error(err.message, err.stack);
   res.status(statusCode).json({
     message: err.message,

@@ -1,0 +1,6 @@
+const LIVE_POKEMON_POSITION = {
+  BACKPACK: "1",
+  COMPUTER: "2",
+  RELEASED: "3",
+  WILD: "4",
+};

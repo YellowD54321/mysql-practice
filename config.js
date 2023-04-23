@@ -3,7 +3,7 @@ const config = {
     host: "localhost",
     user: "root",
     password: "rootpassword",
-    database: "diablo2",
+    database: "pokemon",
     port: 3306,
   },
 };
